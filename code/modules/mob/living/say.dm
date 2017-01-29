@@ -42,10 +42,13 @@ var/list/department_radio_keys = list(
 	  ":Ò" = "Science",		".Ò" = "Science",
 	  ":Ü" = "Medical",		".Ü" = "Medical",
 	  ":Ó" = "Engineering",	".Ó" = "Engineering",
-	  ":Û»" = "Security",	".Û»" = "Security",
+	  ":Û" = "Security",	".Û" = "Security",
 	  ":Ö" = "whisper",		".Ö" = "whisper",
 	  ":Å" = "Mercenary",	".Å" = "Mercenary",
 	  ":Ã" = "Supply",		".Ã" = "Supply",
+	  ":Ì" = "Service",		".Ì" = "Service",
+	  ":Ç" = "AI Private",	".Ç" = "AI Private",
+	  ":ß" = "Entertainment",".ß" = "Entertainment",
 
 	  ":ê" = "right ear",	".ê" = "right ear",
 	  ":ä" = "left ear",	".ä" = "left ear",
@@ -59,6 +62,9 @@ var/list/department_radio_keys = list(
 	  ":ö" = "whisper",		".ö" = "whisper",
 	  ":ó" = "Mercenary",	".ó" = "Mercenary",
 	  ":ã" = "Supply",		".ã" = "Supply",
+	  ":ì" = "Service",		".ì" = "Service",
+	  ":ç" = "AI Private",	".ç" = "AI Private",
+	  ":ÿ" = "Entertainment",".ÿ" = "Entertainment",
 )
 
 
