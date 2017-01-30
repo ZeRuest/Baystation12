@@ -517,6 +517,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
 	config.loadforumsql("config/forumdbconfig.txt")
+	config.loadhub("config/infinihub_config.txt")
 
 /hook/startup/proc/loadMods()
 	world.load_mods()
@@ -621,6 +622,13 @@ var/world_topic_spam_protect_time = world.timeofday
 var/failed_db_connections = 0
 var/failed_old_db_connections = 0
 
+/hook/startup/proc/connectHub()
+	if(!infinihub_test())
+		world.log << "Your server failed to send a test request to the hub."
+	else
+		world.log << "Test request to the Infinihub successful."
+	return 1
+
 /hook/startup/proc/connectDB()
 	if(!setup_database_connection())
 		world.log << "Your server failed to establish a connection with the feedback database."
@@ -662,6 +670,14 @@ proc/establish_db_connection()
 	else
 		return 1
 
+proc/infinihub_test()
+	var/json = "{\"Header\":\"HubTest\", \"Test\":\"{7b01d3b6-778c-4bb3-bb37-7a119abbfcc0}\"}"
+	var/response = json_decode(http_post("[config.hub_address]/api/test", "Content-Type: application/json", json))
+	if (response["test"] == "{7b01d3b6-778c-4bb3-bb37-7a119abbfcc0}")
+		return 1
+	else
+		return 0
+	return 0
 
 /hook/startup/proc/connectOldDB()
 	if(!setup_old_database_connection())

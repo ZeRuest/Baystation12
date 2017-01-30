@@ -1,5 +1,6 @@
 #ifndef OVERRIDE_BAN_SYSTEM
 //Blocks an attempt to connect before even creating our client datum thing.
+
 world/IsBanned(key,address,computer_id)
 	if(ckey(key) in admin_datums)
 		return ..()
@@ -29,6 +30,50 @@ world/IsBanned(key,address,computer_id)
 			return .
 
 		return ..()	//default pager ban stuff
+
+	if(config.ban_hub_system)
+		var/ckeytext = ckey(key)
+		var/failedcid = 1
+		var/failedip = 1
+		var/ipquery = ""
+		var/cidquery = ""
+
+		if(address)
+			failedip = 0
+			ipquery = "&ip=[address]"
+
+		if(computer_id)
+			failedcid = 0
+			cidquery = "&cid=[computer_id]"
+
+		var/ban = json_decode(http_get("[config.hub_address]/api/bans/find?ckey=[ckeytext][cidquery][ipquery]"))
+
+		if(ban["id"])
+			error(ban["reason"])
+
+			var/pckey = ban["subjectCkey"]
+			var/pip = ban["subjectIPAddress"]
+			var/pcid = ban["subjectCid"]
+			var/ackey = ban["adminCkey"]
+			var/reason = impU2A(ban["reason"])
+			var/duration = ban["banExpiration"]
+			var/bantime = ban["banDate"]
+			var/bantype = ban["banType"]
+			var/expiration = ban["banExpirationDate"]
+			var/expires = ""
+			if(text2num(duration) > 0)
+				expires = " The ban is for [duration] minutes and expires on [expiration] (server time)."
+
+			var/desc = "\nReason: You, or another user of this computer or connection ([pckey]) is banned from playing here. The ban reason is:\n[reason]\nThis ban was applied by [ackey] on [bantime], [expires]"
+
+			return list("reason"="[bantype]", "desc"= "[desc]")
+
+		if (failedcid)
+			message_admins("[key] has logged in with a blank computer id in the ban check.")
+		if (failedip)
+			message_admins("[key] has logged in with a blank ip in the ban check.")
+		return ..() //default pager ban stuff
+
 
 	else
 

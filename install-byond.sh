@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e
 if [ -f "$HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}/byond/bin/DreamMaker" ];
 then

@@ -156,7 +156,6 @@ var/list/gamemode_cache = list()
 	var/ban_legacy_system = 0	//Defines whether the server uses the legacy banning system with the files in /data or the SQL system. Config option in config.txt
 	var/use_age_restriction_for_jobs = 0   //Do jobs use account age restrictions?   --requires database
 	var/use_age_restriction_for_antags = 0 //Do antags use account age restrictions? --requires database
-
 	var/simultaneous_pm_warning_timeout = 100
 
 	var/use_recursive_explosions //Defines whether the server uses recursive or circular explosions.
@@ -219,6 +218,11 @@ var/list/gamemode_cache = list()
 	var/radiation_decay_rate = 1 //How much radiation is reduced by each tick
 	var/radiation_resistance_multiplier = 6.5
 	var/radiation_lower_limit = 0.35 //If the radiation level for a turf would be below this, ignore it.
+
+	// infinihub_config.txt configs
+	var/ban_hub_system = 0 // Overrides both legacy and sql systems
+	var/admin_hub_system = 0 // Overrides both legacy and sql systems
+	var/hub_address = "" // Address to the hub.
 
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
@@ -820,6 +824,41 @@ var/list/gamemode_cache = list()
 				sqlfdbkpass = value
 			if ("enable_stat_tracking")
 				sqllogging = 1
+			else
+				log_misc("Unknown setting in configuration: '[name]'")
+
+/datum/configuration/proc/loadhub(filename)
+	var/list/Lines = file2list(filename)
+	for(var/t in Lines)
+		if(!t)	continue
+
+		t = trim(t)
+		if (length(t) == 0)
+			continue
+		else if (copytext(t, 1, 2) == "#")
+			continue
+
+		var/pos = findtext(t, " ")
+		var/name = null
+		var/value = null
+
+		if (pos)
+			name = lowertext(copytext(t, 1, pos))
+			value = copytext(t, pos + 1)
+		else
+			name = lowertext(t)
+
+		if (!name)
+			continue
+
+		switch (name)
+			if ("admin_hub_system")
+				admin_hub_system = 1
+			if ("ban_hub_system")
+				ban_hub_system = 1
+			if ("hub_address")
+				hub_address = value
+
 			else
 				log_misc("Unknown setting in configuration: '[name]'")
 

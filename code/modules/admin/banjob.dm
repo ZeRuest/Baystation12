@@ -64,8 +64,19 @@ DEBUG
 		if (!length(jobban_keylist))
 			jobban_keylist=list()
 			log_admin("jobban_keylist was empty")
+
 	else
-		if(!establish_db_connection())
+		if(infinihub_test())
+			error("Infinihub jobbans are not currently implemented.")
+			log_misc("Infinihub jobbans are not currently implemented.")
+			return
+		if(!infinihub_test())
+			if(!establish_db_connection())
+			error("Infinihub test request failed. Reverting to the legacy ban system.")
+			log_misc("Infinihub test request failed. Reverting to the legacy ban system.")
+			return
+
+		else if(!establish_db_connection())
 			error("Database connection failed. Reverting to the legacy ban system.")
 			log_misc("Database connection failed. Reverting to the legacy ban system.")
 			config.ban_legacy_system = 1
