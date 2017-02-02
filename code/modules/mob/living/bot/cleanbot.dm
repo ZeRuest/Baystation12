@@ -40,7 +40,7 @@
 		if(confirmTarget(D))
 			target = D
 			return
- 
+
 /mob/living/bot/cleanbot/confirmTarget(var/obj/effect/decal/cleanable/D)
 	if(!..())
 		return 0
@@ -48,7 +48,7 @@
 		if(istype(D, T))
 			return 1
 	return 0
- 
+
 /mob/living/bot/cleanbot/handleAdjacentTarget()
 	if(get_turf(target) == src.loc)
 		UnarmedAttack(target)
@@ -149,6 +149,7 @@
 	target_types += /obj/effect/decal/cleanable/liquid_fuel
 	target_types += /obj/effect/decal/cleanable/mucus
 	target_types += /obj/effect/decal/cleanable/dirt
+	target_types += /obj/effect/decal/cleanable/spiderling_remains
 
 	if(blood)
 		target_types += /obj/effect/decal/cleanable/blood
