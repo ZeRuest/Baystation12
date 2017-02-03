@@ -194,6 +194,7 @@
 		"Telecomms Satellite" = /area/rescue_base/commssat,
 		"Engineering Station" = /area/rescue_base/mining,
 		"Arrivals dock" = /area/rescue_base/arrivals_dock,
+		"SOS signal source" = /area/rescue_base/expedition,
 		)
 	docking_controller_tag = "rescue_shuttle"
 	destination_dock_targets = list(

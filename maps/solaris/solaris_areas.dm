@@ -221,6 +221,12 @@
 	name = "west of the communication satellite"
 	icon_state = "west"
 
+/area/rescue_base/expedition //6 z-level, map what you want ~!~ (c)dtb
+	name = "expedition to SOS signal"
+	icon = 'icons/turf/SOL/areas_n_o.dmi'
+	icon_state = "expedition_shuttle"
+	base_turf = /turf/simulated/floor/asteroid
+
 /area/rescue_base/mining
 	name = "northeast of the engineering station"
 	icon_state = "northeast"

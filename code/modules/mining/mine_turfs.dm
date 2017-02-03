@@ -419,6 +419,13 @@ var/list/mining_floors = list()
 	mineralChance = 100 //25
 	mineralSpawnChanceList = list("Uranium" = 10, "Platinum" = 10, "Iron" = 20, "Carbon" = 20, "Diamond" = 2, "Gold" = 10, "Silver" = 10, "Phoron" = 20)
 
+/**********************Asteriod with AIR!****************/ // made for Z6 (c) dtb
+
+/turf/simulated/floor/asteroid/asteroid_air
+	oxygen = MOLES_O2STANDARD
+	nitrogen = MOLES_N2STANDARD
+	temperature = T20C //20.0 celsium - 293,15 Kelvins. Also, there are T0C - for HOLE HARDCORE!
+	has_resources = 0 // nothing to dig, but it hadn't been dug before, so it can change sprite
 
 /**********************Asteroid**************************/
 

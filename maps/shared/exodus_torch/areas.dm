@@ -527,6 +527,15 @@
 	name = "Mine"
 	icon_state = "unexplored"
 
+/area/mine/expedition
+	name = "Expedition"
+	icon = 'icons/turf/SOL/areas_n_o.dmi'
+	icon_state = "expedition_unexplored"
+
+/area/mine/expedition/air
+	name = "Expedition-air"
+	icon_state = "expedition_unexplored_air"
+
 // OUTPOSTS
 
 /area/outpost/abandoned
