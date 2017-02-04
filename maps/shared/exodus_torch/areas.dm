@@ -530,15 +530,7 @@
 /area/mine/expedition
 	name = "Expedition"
 	icon = 'icons/turf/SOL/areas_n_o.dmi'
-	//icon_state = "expedition_unexplored"
-
-/area/mine/expedition/unexplored
-	name = "Unexplored"
 	icon_state = "expedition_unexplored"
-
-/area/mine/expedition/explored
-	name = "Explored"
-	icon_state = "expedition_explored"
 
 /area/mine/expedition/air
 	name = "Expedition-air"
