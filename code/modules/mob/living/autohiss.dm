@@ -55,6 +55,11 @@
 			"r" = list("rr", "rrr", "rrrr"),
 			"נ" = list("ננ", "נננ", "ננננ")
 		)
+	autohiss_extra_map = list(
+			"ס" = list("סס","ססס","סססס"),
+			"ע" = list("עע","עעע","עעעע"),
+			"ר" = list("רר","ררר","רררר")
+	)
 	autohiss_exempt = list(LANGUAGE_SIIK_MAAS)
 
 
