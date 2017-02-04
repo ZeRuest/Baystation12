@@ -41,6 +41,66 @@
 	siemens_coefficient = 0.8
 	body_parts_covered = HEAD|FACE|EYES
 
+/obj/item/clothing/head/wizard/magus
+	name = "Magus Helm"
+	desc = "A mysterious helmet that hums with an unearthly power."
+	icon_state = "magus"
+	item_state = "magus"
+	item_state_slots = list(
+		slot_l_hand_str = "helmet",
+		slot_r_hand_str = "helmet",
+		)
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES
+
+/obj/item/clothing/head/wizard/magir
+	name = "red wizard hood"
+	desc = "This hood is painted in blood of innocent servant of Evil."
+	icon_state = "magus"
+	item_state = "magus"
+	item_state_slots = list(
+		slot_l_hand_str = "wizard",
+		slot_r_hand_str = "wizard",
+		)
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES
+
+/obj/item/clothing/head/wizard/magig
+	name = "green wizard hood"
+	desc = "It has runic letter on it. QF'QF'ASA. Who known what it's mean?"
+	icon_state = "magig"
+	item_state = "magig"
+	item_state_slots = list(
+		slot_l_hand_str = "wizard",
+		slot_r_hand_str = "wizard",
+		)
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES
+
+/obj/item/clothing/head/wizard/magib
+	name = "green wizard hood"
+	desc = "This hood makes you remember the blue sky of Midgard. Ah, good old times!"
+	icon_state = "magib"
+	item_state = "magib"
+	item_state_slots = list(
+		slot_l_hand_str = "wizard",
+		slot_r_hand_str = "wizard",
+		)
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES
+
+/obj/item/clothing/head/wizard/magiy
+	name = "green wizard hood"
+	desc = "The safe word isn't banana"
+	icon_state = "magiy"
+	item_state = "magiy"
+	item_state_slots = list(
+		slot_l_hand_str = "wizard",
+		slot_r_hand_str = "wizard",
+		)
+	siemens_coefficient = 0.8
+	body_parts_covered = HEAD|FACE|EYES
+
 /obj/item/clothing/head/wizard/amp
 	name = "psychic amplifier"
 	desc = "A crown-of-thorns psychic amplifier. Kind of looks like a tiara having sex with an industrial robot."
@@ -90,12 +150,35 @@
 	icon_state = "redwizard"
 	item_state = "redwizrobe"
 
+/obj/item/clothing/suit/wizrobe/magir
+	name = "red wizard robe"
+	desc = "I put on my robe and my wizard hat."
+	icon_state = "magir"
+	item_state = "magir"
+
+/obj/item/clothing/suit/wizrobe/magig
+	name = "green wizard robe"
+	desc = "It's covered with spots of old beer."
+	icon_state = "magig"
+	item_state = "magig"
+
+/obj/item/clothing/suit/wizrobe/magib
+	name = "blue wizard robe"
+	desc = "Generally, goblins have red blood. But this is blue!"
+	icon_state = "magib"
+	item_state = "magib"
+
+/obj/item/clothing/suit/wizrobe/magiy
+	name = "yellow wizard robe"
+	desc = "Ah, let's save this world again!"
+	icon_state = "magiy"
+	item_state = "magiy"
+
 /obj/item/clothing/suit/wizrobe/druid
 	name = "druid robe"
 	desc = "A robe made of raw hide that seems to radiate malevolent nature power."
 	icon_state = "druid"
 	item_state = "druid"
-
 
 /obj/item/clothing/suit/wizrobe/marisa
 	name = "Witch Robe"
