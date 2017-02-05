@@ -56,8 +56,8 @@
 /obj/item/clothing/head/wizard/magir
 	name = "red wizard hood"
 	desc = "This hood is painted in blood of innocent servant of Evil."
-	icon_state = "magus"
-	item_state = "magus"
+	icon_state = "magir"
+	item_state = "magir"
 	item_state_slots = list(
 		slot_l_hand_str = "wizard",
 		slot_r_hand_str = "wizard",
