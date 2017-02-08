@@ -22,7 +22,7 @@
 #################################
 
 # Your name.  
-author: Sammaell
+author: Nero07
 
 # Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
 delete-after: True
@@ -33,5 +33,4 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - bugfix: "Обновление спрайтов скреллок и ящерок."
-
+  - rscadd: "Added communications functionality to AI holopads. To use, stand on a holopad and click it. Make a new holocall and select the target pad from the list. The targetpad will light up, emit a sound and inform nearby players about the incoming call. To pick it up, just click the pad. The caller is projected above the holopad and can talk to/emote with all people in view of the holopad. To end the call, step off the holopad. The call can also be ended from the other side by clicking the active holopad."
