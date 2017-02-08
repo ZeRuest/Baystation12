@@ -177,7 +177,11 @@
 		/obj/item/weapon/reagent_containers/spray/luminol,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/glasses/sunglasses/sechud/toggle,
-		/obj/item/device/holowarrant
+		/obj/item/device/holowarrant,
+		/obj/item/weapon/gun/projectile/colt/detective,
+		/obj/item/ammo_magazine/c45m/rubber,
+		/obj/item/ammo_magazine/c45m/flash,
+		/obj/item/clothing/accessory/holster/waist	
 	)
 
 /obj/structure/closet/secure_closet/forensics/New()
