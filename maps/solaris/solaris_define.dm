@@ -56,7 +56,7 @@
 							NETWORK_TELECOM
 							)
 
-	evac_controller_type = /datum/evacuation_controller/pods/shuttle
+	evac_controller_type = /datum/evacuation_controller/shuttle
 
 /datum/map/solaris/perform_map_generation()
 	new /datum/random_map/automata/cave_system(null, 1, 1, 6, 255, 255) // Create the mining Z-level.
