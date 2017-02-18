@@ -135,3 +135,12 @@
 	permeability_coefficient = 0.03
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 25, bomb = 30, bio = 0, rad = 0)
 
+/obj/item/clothing/gloves/gooddoctor
+	name = "black latex gloves"
+	desc = "Plastic parts and glue..."
+	icon_state = "blacklatexgloves"
+	item_state = "blacklatexgloves"
+	siemens_coefficient = 1.1
+	permeability_coefficient = 0.01
+	germ_level = 0
+

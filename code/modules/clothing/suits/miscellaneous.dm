@@ -491,3 +491,11 @@
 	icon_state = "trackjacketwhite"
 	icon_open = "trackjacketwhite_open"
 	icon_closed = "trackjacketwhite"
+
+/obj/item/clothing/suit/gooddoctor
+	name = "labcoat"
+	desc = "I have become an abstract ideal."
+	icon_state = "dr_labcoat"
+	item_state = "dr_labcoat"
+	flags_inv = HIDEJUMPSUIT
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
