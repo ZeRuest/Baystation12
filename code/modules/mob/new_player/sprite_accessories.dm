@@ -720,6 +720,10 @@
 		name = "Walrus Moustache"
 		icon_state = "facial_walrus"
 
+	gdoctor//custom by samme
+		name = "Go-o-o-o-od doctor"
+		icon_state = "facial_gooddoctor_s"
+
 /*
 ///////////////////////////////////
 /  =---------------------------=  /
