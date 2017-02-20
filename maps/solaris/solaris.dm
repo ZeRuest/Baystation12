@@ -6,6 +6,8 @@
 	#include "solaris_holodecks.dm"
 	#include "solaris_shuttles.dm"
 
+	#include "solaris_presets.dm"
+
 	#include "solaris_unit_testing.dm"
 	#include "solaris_zas_tests.dm"
 
@@ -17,12 +19,7 @@
 	#include "loadout/loadout_uniform.dm"
 	#include "loadout/loadout_xeno.dm"
 
-	#include "../shared/exodus_torch/areas.dm"
-	#include "../shared/exodus_torch/zas_tests.dm"
-	#include "../shared/exodus_torch/loadout/loadout_gloves.dm"
-	#include "../shared/exodus_torch/loadout/loadout_head.dm"
-	#include "../shared/exodus_torch/loadout/loadout_shoes.dm"
-	#include "../shared/exodus_torch/loadout/loadout_suit.dm"
+	#include "../shared/exodus_torch/_include.dm"
 
 	#include "solaris-0.dmm"
 	#include "solaris-1.dmm"
