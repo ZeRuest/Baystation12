@@ -721,8 +721,8 @@
 		icon_state = "facial_walrus"
 
 	gdoctor//custom by samme
-		name = "Go-o-o-o-od doctor"
-		icon_state = "facial_gooddoctor_s"
+		name = "Good Doctor"
+		icon_state = "facial_doctorsteel_s"
 
 /*
 ///////////////////////////////////
