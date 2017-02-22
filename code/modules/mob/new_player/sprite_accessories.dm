@@ -596,6 +596,12 @@
 		gender = MALE
 		veryshort = 1
 
+	rasputin
+		name = "Balding Tail"
+		icon_state = "hair_ponytail6"
+		gender = MALE
+		veryshort = 1
+
 /*
 ///////////////////////////////////
 /  =---------------------------=  /
@@ -723,6 +729,11 @@
 	gdoctor//custom by samme
 		name = "Good Doctor"
 		icon_state = "facial_doctorsteel_s"
+
+	rasputin2
+		name = "Very Very Long Beard"
+		icon_state = "facial_warlock"
+
 
 /*
 ///////////////////////////////////
