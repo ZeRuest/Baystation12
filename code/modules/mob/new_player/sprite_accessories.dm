@@ -728,7 +728,7 @@
 
 	gdoctor//custom by samme
 		name = "Good Doctor"
-		icon_state = "facial_doctorsteel_s"
+		icon_state = "facial_doctorsteel"
 
 	rasputin2
 		name = "Very Very Long Beard"
